@@ -2,4 +2,4 @@
 
  Mine steps of Learning ML.
     
-<img src ='5Supervised Learning (Classification)/6-step-ml-framework.png' width = 50%>
+<img src ='5Supervised Learning (Classification)/6-step-ml-framework.png' >
