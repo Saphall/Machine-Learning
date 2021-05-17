@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style type=text/css>
+        @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Varela Round', 'Kumbh Sans', sans-serif;
+        }
+
+        div {
+            color: rgb(46, 44, 44);
+        }
+
+        .navbar {
+            background: #131313;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+
+        .navbar__container {
+            display: flex;
+            justify-content: space-between;
+            height: 80px;
+            z-index: 1;
+            width: 100%;
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+
+        #navbar_logo {
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            text-decoration: none;
+            padding-left: 25px;
+        }
+
+
+        .fa-praying-hands {
+            margin-right: 0.8rem;
+        }
+
+        .navbar__menu {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            text-align: center;
+        }
+
+        .navbar__item {
+            height: 80px;
+        }
+
+        .navbar__links {
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            padding: 0 1rem;
+            height: 100%;
+        }
+
+        .navbar__btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 1rem;
+            width: 100%;
+        }
+
+        #start {
+            border: none;
+            padding: 10px 20px;
+            height: 100%;
+            width: 30%;
+            cursor: pointer;
+            font-size: 1.5rem;
+
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px 20px;
+            height: 100%;
+            width: 100%;
+            border-radius: 5px;
+            background: #518f49;
+            color: #fff;
+        }
+
+        #log {
+            background: #5ca353;
+        }
+
+        #log:hover {
+            background: #037c3a;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: #037c3a;
+            transition: all 0.3s ease;
+        }
+
+        .navbar__links:hover {
+            color: #e66557;
+            transition: all 0.3s ease;
+        }
+
+
+
+
+        .main {
+            background-color: #141412;
+
+
+        }
+
+
+        .main__container {
+            display: grid;
+            grid-template-columns: 1.5fr 1.5fr;
+            align-items: center;
+            justify-self: center;
+            margin: 0 auto;
+            height: 90vh;
+
+            background-color: #141412;
+            z-index: 1;
+            width: 100%;
+            max-width: 333300px;
+            padding: 0 160px;
+        }
+
+        .main__content h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            background-color: #ff8177;
+            background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moztext-fill-color: transparent;
+        }
+    </style>
+    <title>Breast Cancer Detection</title>
+    <script src="https://kit.fontawesome.com/fb9d3931c2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="#" id='navbar_logo' class="s"><i class="fas fa"></i></a>
+
+            <div class="navbar_toogle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="navbar__menu">
+                <!-- <li class="navbar__item"><a href="home.html" class="navbar__links"></a></li>
+                <li class="navbar__item"><a href="list.html" class="navbar__links"></a></li> -->
+                <li class="navbar__item"><a href="/about" class="navbar__links">ABOUT</a> </li>
+                <!-- <li class="navbar__btn"><a href="#.html" class="button" id='log'>ABOUT ></a> </li> -->
+
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main">
+        <div class="main__container">
+            <div class="main__content">
+                <h1>BREAST CANCER DETECTION SYSTEM</h1>
+
+                <br><br><br>
+                <button class='button' id='start' onclick="window.location.href='/detect'">Start</button>
+            </div>
+            <div class="main__img--container">
+                <img src="/static/doc.png" id="main__img">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- 
+    <div align='center'>
+        <h1>
+            WELCOME TO BREAST CANCER DETECTION SYSTEM
+        </h1>
+        <form action="detect">
+            <input type="submit" value="Start">
+        </form>
+    </div> -->
+
+
+</body>
+
+</html>_

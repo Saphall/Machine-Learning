@@ -1,0 +1,220 @@
+<html>
+
+
+<head>
+    <title>Breast Cancer Detection</title>
+    <style type=text/css>
+        @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+
+            padding: 0;
+            font-family: 'Kumbh Sans', sans-serif;
+        }
+
+        .navbar {
+            background: #131313;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+
+        .navbar__container {
+            display: flex;
+            justify-content: space-between;
+            height: 80px;
+            z-index: 1;
+            width: 100%;
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+
+        #navbar_logo {
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            text-decoration: none;
+            padding-left: 25px;
+        }
+
+
+
+
+
+
+        .navbar__item {
+            height: 80px;
+        }
+
+        .navbar__links {
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            padding: 0 1rem;
+            height: 100%;
+        }
+
+        .navbar__btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 1rem;
+            width: 100%;
+        }
+
+
+
+        .button {
+            position: absolute;
+            bottom: 30%;
+            right: 15%;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            padding: 5px 20px;
+            cursor: pointer;
+            font-size: 15px;
+            /* height: 100%;
+            width: 100%; */
+            border: none;
+            border-radius: 10px;
+            background: #e66557;
+            color: #fff;
+        }
+
+        /* #log {
+            background: #5ca353;
+        }
+
+        #log:hover {
+            background: #037c3a;
+            transition: all 0.3s ease;
+        }*/
+
+        .button:hover {
+            background: #b94133;
+            transition: all 0.3s ease;
+        }
+
+        /* .navbar__links:hover {
+            color: #b94133;
+            transition: all 0.3s ease;
+        } */
+
+        .h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            background-color: #ff8177;
+            background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moztext-fill-color: transparent;
+        }
+
+        a {
+            color: white;
+            font-size: 1.4em;
+            text-decoration: none;
+            padding-left: 25px;
+        }
+
+        /* form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px 20px;
+            height: 100%;
+            width: 100%;
+            border-radius: 5px;
+            background: #be5145;
+            color: #fff;
+        } */
+
+        body {
+            background-color: #494945;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(31, 29, 29, 0.822);
+            padding: 66px;
+            height: 24vh;
+            text-align: end;
+            background-color: #0a1a1f;
+            border-radius: 100px;
+            transition: 0.3s;
+            margin: 100px;
+
+
+
+        }
+
+        /* .card:hover {
+            box-shadow: 0 8px 10px 0 rgba(240, 248, 134, 0.795);
+
+        } */
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="#" id='navbar_logo' class="h1">
+                BREAST CANCER DETECTION RESULT</i>
+            </a>
+
+            <div class="navbar__toogle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="navbar__menu">
+                <!-- <li class="navbar__item"><a href="home.html" class="navbar__links"></a></li>
+                <li class="navbar__item"><a href="list.html" class="navbar__links"></a></li> -->
+                <!-- <li class="navbar__item"><a href="#.html" class="navbar__links">ABOUT</a> </li> -->
+                <!-- <li class="navbar__btn"><a href="#.html" class="button" id='log'>ABOUT ></a> </li> -->
+
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="column">
+            <div class="card" style="background-image: url('/static/detect.jpg'); background-repeat: no-repeat;" id='detail'>
+                <div style="display:inline; width:50px; min-height: 110px;background: #FF0000;"></div>
+                <h2>The patient has <p id='detection' style='display: inline;'>BENIGN</p> Cancer.<span style="color:#0a1a1f;">.................</span></span> </h2>
+
+
+            </div>
+        </div>
+    </div>
+    <button class='button' onclick="window.location.href='/about'"><strong>Details >>></strong></button>
+    <!-- <p>
+        The patient has Benign Cancer. </p>
+    <br><br><br> -->
+
+    <!-- <a href='/about' '>Details</a> -->
+
+
+
+</body>
+
+</html>

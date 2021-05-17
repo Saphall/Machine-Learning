@@ -1,0 +1,223 @@
+<html>
+<!--This is index.html-->
+
+<head>
+    <title>Breast Cancer Detection</title>
+    <style type=text/css>
+        @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+        .custom-file-input {
+            color: transparent;
+        }
+
+        .custom-file-input::-webkit-file-upload-button {
+            visibility: hidden;
+        }
+
+        .custom-file-input::before {
+            content: 'Select some files';
+            color: black;
+            display: inline-block;
+            background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+            border: 1px solid #999;
+            border-radius: 3px;
+            padding: 5px 8px;
+            outline: none;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            cursor: pointer;
+        }
+
+        .custom-file-input:hover::before {
+            border-color: black;
+        }
+
+        .custom-file-input:active {
+            outline: 0;
+        }
+
+        .custom-file-input:active::before {
+            background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+
+            padding: 0;
+            font-family: 'Kumbh Sans', sans-serif;
+        }
+
+        .navbar {
+            background: #131313;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+
+        .navbar__container {
+            display: flex;
+            justify-content: space-between;
+            height: 80px;
+            z-index: 1;
+            width: 100%;
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+
+        #navbar_logo {
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            text-decoration: none;
+            padding-left: 25px;
+        }
+
+
+
+
+
+
+        .navbar__item {
+            height: 80px;
+        }
+
+        .navbar__links {
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            padding: 0 1rem;
+            height: 100%;
+        }
+
+        .navbar__btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 1rem;
+            width: 100%;
+        }
+
+
+
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px 20px;
+            height: 100%;
+            width: 100%;
+            border-radius: 5px;
+            background: #518f49;
+            color: #fff;
+        }
+
+        /* #log {
+            background: #5ca353;
+        }
+
+        #log:hover {
+            background: #037c3a;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: #037c3a;
+            transition: all 0.3s ease;
+        } */
+
+        .navbar__links:hover {
+            color: #e66557;
+            transition: all 0.3s ease;
+        }
+
+        .h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            background-color: #ff8177;
+            background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moztext-fill-color: transparent;
+        }
+
+
+        /* form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px 20px;
+            height: 100%;
+            width: 100%;
+            border-radius: 5px;
+            background: #be5145;
+            color: #fff;
+        } */
+
+        body {
+            background-color: #494945;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="#" id='navbar_logo' class="h1">BREAST CANCER DETECTION</i></a>
+
+            <div class="navbar__toogle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="navbar__menu">
+                <!-- <li class="navbar__item"><a href="home.html" class="navbar__links"></a></li>
+                <li class="navbar__item"><a href="list.html" class="navbar__links"></a></li> -->
+                <!-- <li class="navbar__item"><a href="#.html" class="navbar__links">ABOUT</a> </li> -->
+                <!-- <li class="navbar__btn"><a href="#.html" class="button" id='log'>ABOUT ></a> </li> -->
+
+
+            </ul>
+        </div>
+    </nav>
+
+
+    <img id="preview" style='position:absolute; left:50%;top:50%; transform: translate(-50%,-50%); max-width:100%' width=auto height=400 src="/1" />
+    <br><br>
+
+    <body>
+        <form style=' position:absolute; left:50%;top:85%; transform: translate(-50%,-50%);' action="http://127.0.0.1:5000/upload" enctype="multipart/form-data" method="POST">
+            <input type="file" class="custom-file-input" name="pic" onChange="document.forms[0].submit()" />
+            <input type="button" onclick="location.href='/result'" value="Detect" style="font-size: 12px; padding: 4px" />
+        </form>
+        <script>
+            var l = window.location.href;
+            if (l[l.length - 1] == 't') {
+                // <
+                // !--alert("don't render");
+                // -- >
+                document.getElementById("preview").src = "/static/upload.png";
+            }
+        </script>
+    </body>
+
+</html>

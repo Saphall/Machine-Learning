@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Breast Cancer Detection</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type=text/css>
+        @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            color: white;
+            padding: 0;
+            font-family: 'Varela Round', 'Kumbh Sans', sans-serif;
+        }
+
+        h2 {
+            color: #ff8177;
+        }
+
+        .main {
+            background-color: #494945;
+            /* display: grid; */
+            /* grid-template-columns: 1.5fr 1.5fr;
+            align-items: center;
+            justify-self: center; */
+            /* margin: 0 auto;
+            height: 100%;
+
+            z-index: 1;
+            width: 100%;
+            max-width: 333300px; */
+            padding: 38px 100px;
+
+
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 0 10px;
+        }
+
+        .row {
+            margin: 0 -5px;
+        }
+
+        /* .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        } */
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(216, 199, 199, 0.822);
+            padding: 26px;
+            text-align: center;
+            background-color: #141412;
+            border-radius: 10px;
+            transition: 0.3s;
+
+
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 10px 0 rgba(240, 248, 134, 0.795);
+            cursor: pointer;
+        }
+
+        hr {
+
+            width: 50%;
+            margin: auto;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            border: 2px block #ecf018;
+
+        }
+
+        #detail {
+            margin-right: 20px;
+        }
+    </style>
+
+</head>
+
+<body class='main'>
+
+    <div class="row">
+        <div class="column">
+            <div class="card" id='detail'>
+                <h2>BENIGN </h2>
+                <br>
+                <p>Benign tumors are not considered cancerous: their cells are close to normal in appearance, they grow slowly, and they do not invade nearby tissues or spread to other parts of the body.</p>
+                <p>They are not life threatening, but some types of benign breast lumps can increase a woman's risk of getting breast cancer. Any breast lump or change needs to be checked by a health care professional to determine if it is benign or malignant (cancer) and if it might affect your future cancer risk.</p>
+
+                <hr>
+
+                <h2> MALIGNANT</h2>
+                <br>
+                <p>Malignant tumors are cancerous. Left unchecked, malignant cells eventually can spread beyond the original tumor to other parts of the body.</p>
+                <p>Usually breast cancer begins in the cells of the lobules, which are the milk-producing glands, or the ducts, the passages that drain milk from the lobules to the nipple. Less commonly, breast cancer can begin in the stromal tissues, which include the fatty and fibrous connective tissues of the breast. Over time, cancer cells can invade nearby healthy breast tissue and make their way into the underarm lymph nodes and then have a pathway into other parts of the body. </p>
+            </div>
+        </div>
+
+
+        <div class="column">
+            <div class="card" style='border-radius:60px; padding:30px;'>
+
+                <h2>PREVENTION</h2><br>
+                <p>There is no sure way to prevent breast cancer. But there are things you can do that might lower your risk. This can be especially helpful for women with certain risk factors for breast cancer(for instance, because you have a strong family history of breast cancer, a known gene mutation that increases breast cancer risk).</p>
+                <hr style='width:10%; border: 1px dashed #fff;'>
+
+                <ul>
+                    <li>Get to and stay at a healthy weight</li><br>
+                    <li>Be physically active</li><br>
+                    <li>Avoid or Limit Alcohol</li><br>
+
+
+                    <li>Genetic counseling and testing for breast cancer risk </li><br>
+                    <li>Close observation to look for early signs of breast cancer</li><br>
+                    <li>Medicines to lower breast cancer risk</li><br>
+                    <li>Preventive (prophylactic) surgery</li>
+                </ul>
+                <hr style='width:10%; border: 1px dashed #fff;'>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
