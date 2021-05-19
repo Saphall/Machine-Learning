@@ -9,6 +9,10 @@ from db import db_init, db
 from models import Img
 import models
 
+from tensorflow.keras.models import load_model
+import cv2
+from matplotlib.image import imread
+
 
 app = Flask(__name__)
 # SQLAlchemy config. Read more: https://flask-sqlalchemy.palletsprojects.com/en/2.x/
@@ -19,6 +23,7 @@ app.config['UPLOAD_FOLDER'] = "./tmp"
 app.config['MAX_CONTENT_PATH'] = 100000 * 1024 * 1024
 app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024
 db_init(app)
+result =  None
 
 
 @app.route('/')
@@ -32,12 +37,43 @@ def about():
 
 @app.route('/detect')
 def detect():
-    return render_template('/index.html')
+        # return render_template('/result.html?benign')
+    return render_template('index.html')
 
 
 @app.route('/result')
 def result():
-    return render_template('/result.html')
+    return render_template('result.html')
+
+
+@app.route('/resultCheck')
+def resultCheck():
+    loaded_model = load_model('Model')
+
+    unknown_image = imread('./tmp/image.jpg')
+    unknown_image.shape   # You will see (1024,1024) image
+
+    img = cv2.resize(unknown_image, (224, 224))
+    preds = loaded_model.predict(img.reshape(1, 224, 224, 1))
+
+    result = None
+
+    if preds <= 0.5:
+        # print("The cancer is Malignant")
+        result = True
+    else:
+        # print("The cancer is Benign")
+        result = False
+
+    if result:
+        # return render_template('/result.html', text=request.from.get('malignant', ''))
+        return redirect('/result?malignant', code=302)
+    elif result == False: 
+        # return render_template('/result.html', text=request.from.get('malignant', ''))
+        return redirect('/result?benign', code=302)
+    else:
+        return redirect('/result?invalid', code=302)
+
 
 
 @app.route('/upload', methods=['POST'])

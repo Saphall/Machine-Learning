@@ -213,8 +213,20 @@
 
     <!-- <a href='/about' '>Details</a> -->
 
-
-
+        <script>
+            var l = window.location.href;
+            if (l.includes('malignant')) {
+                document.getElementById("detection").innerHTML= "MALIGNANT";
+            }
+            else if(l.includes('benign'))
+                document.getElementById("detection").innerHTML= "BENIGN";
+            else
+            {
+                pos = document.URL.indexOf('?');
+                msg = document.URL.substr(pos+1);
+                document.getElementById("detection").innerHTML= msg;
+            }
+        </script>
 </body>
 
 </html>

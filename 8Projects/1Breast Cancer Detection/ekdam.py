@@ -5,7 +5,7 @@ import cv2
 loaded_model = load_model('Model')
 
 
-unknown_image = imread('image.jpg')
+unknown_image = imread('./tmp/image.jpg')
 unknown_image.shape   # You will see (1024,1024) image
 
 
