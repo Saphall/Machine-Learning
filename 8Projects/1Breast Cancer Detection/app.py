@@ -37,7 +37,6 @@ def about():
 
 @app.route('/detect')
 def detect():
-        # return render_template('/result.html?benign')
     return render_template('index.html')
 
 
@@ -95,7 +94,6 @@ def upload():
     db.session.add(img)
     db.session.commit()
 
-    # return 'Img Uploaded!', 200
     return redirect('/detect?preview', code=302)
 
 
